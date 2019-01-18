@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: ilya_test
+  password: 123456
+  pool: 5
+
+development:
+  <<: *default
+  database: analogue_stackoverflow_dev
+
+test:
+  <<: *default
+  database: analogue_stackoverflow_test
+
+production:
+  <<: *default
+  database: analogue_stackoverflow_prod
+  username: username
+  password: password
+
+staging:
+  <<: *default
+  database: analogue_stackoverflow_staging
